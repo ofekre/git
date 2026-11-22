@@ -1,0 +1,869 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261117140447
+Username: אופק\ofek6
+RunAs User: אופק\ofek6
+Configuration Name: 
+Machine: אופק (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 26880
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\history.txt
+PS C:\Users\ofek6> cd "C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex1-vim"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex1-vim> "hello git" | Out-File -Encoding utf8 a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex1-vim> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex1-vim> git commit
+[master (root-commit) 8856071] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex1-vim> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex2-revert-reset
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/17/2026   2:53 PM                ex2-revert-reset
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex2-revert-reset
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git init -b main
+Initialized empty Git repository in C:/Users/ofek6/Desktop/שיעור 3 תיכנות אינטרנט/ex2-revert-reset/.git/
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> "a" | Out-File -Encoding utf8 a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git commit -m "add a.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git branch new-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> "b" | Out-File -Encoding utf8 b.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git add b.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git commit -m "add b.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git revert HEAD --no-edit
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> "c" | Out-File -Encoding utf8 c.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git add c.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git commit -m "add c.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git reset --hard HEAD~3
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/17/2026   2:53 PM              6 a.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex2-revert-reset> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex3-amend
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/17/2026   2:55 PM                ex3-amend
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex3-amend
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> "a" | Out-File -Encoding utf8 a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git commit -m "initial commit"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git commit --amend -m "I am a better, and indicative commit message, and I will always write detailed commit messages"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> git show --stat
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex3-amend> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex4-squash
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/17/2026   3:00 PM                ex4-squash
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex4-squash
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> "line 1" | Out-File -Encoding utf8 a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git commit -m "initial commit"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> vim a.txt
+vim : The term 'vim' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ vim a.txt
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (vim:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+vim : The term 'vim' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ vim a.txt
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (vim:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> Add-Content -Path a.txt -Value "line 2"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git commit -m "edit 1"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> Add-Content -Path a.txt -Value "line 3"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git commit -m "edit 2"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> Add-Content -Path a.txt -Value "line 4"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git add a.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git commit -m "edit 3"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git rebase -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git rebase -i --root
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> git show --stat
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> Get-Content a.txt
+line 1
+line 2
+line 3
+line 4
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex4-squash> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex5-gitignore
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/17/2026   3:26 PM                ex5-gitignore
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex5-gitignore
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> 'print("Hello from a.py")' | Out-File -Encoding utf8 a.py
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git add a.py
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git commit -m "add a.py"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> python a.py
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> ls -Force
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d--h--        11/17/2026   3:26 PM                .git
+-a----        11/17/2026   3:26 PM             29 a.py
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+
+**********************
+Windows PowerShell transcript start
+Start time: 20261118201725
+Username: אופק\ofek6
+RunAs User: אופק\ofek6
+Configuration Name: 
+Machine: אופק (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5516
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\history.txt
+PS C:\Users\ofek6> cd "C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git log --oneline
+e3efb27 (HEAD -> main) add a.py
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> mkdir .idea
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:20 PM                .idea
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> "test" | Out-File -Encoding utf8 .idea/workspace.xml
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git check-ignore -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> ".idea/`n__pycache__/`n*.pyc" | Out-File -Encoding utf8 .gitignore
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> Get-Content .gitignore
+.idea/
+__pycache__/
+*.pyc
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git check-ignore -v .idea/workspace.xml
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git add .gitignore
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git commit -m "add gitignore"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git status --ignored
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex5-gitignore> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex6-wrong-branch
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:23 PM                ex6-wrong-branch
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex6-wrong-branch
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> "base content" | Out-File -Encoding utf8 base.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git add base.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git commit -m "add base.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> Add-Content -Path base.txt -Value "unfinished feature work"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git stash -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git stash
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git stash list
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git checkout -b feature-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git stash pop
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> git stash list
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex6-wrong-branch> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex7-cherry-pick
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:25 PM                ex7-cherry-pick
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex7-cherry-pick
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> "init" | Out-File -Encoding utf8 init.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git add init.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git commit -m "initial commit"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git checkout -b dev
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> "fix 1" | Out-File -Encoding utf8 fix1.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git add fix1.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git commit -m "add fix1"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> "fix 2" | Out-File -Encoding utf8 fix2.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git add fix2.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git commit -m "add fix2"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> "fix 3" | Out-File -Encoding utf8 fix3.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git add fix3.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git commit -m "add fix3"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git checkout main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/18/2026   8:25 PM              9 init.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git log dev --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git cherry-pick -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git cherry-pick bfcb558
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/18/2026   8:26 PM             10 fix2.txt
+-a----        11/18/2026   8:25 PM              9 init.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex7-cherry-pick> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex8-reflog
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:27 PM                ex8-reflog
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex8-reflog
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> "init" | Out-File -Encoding utf8 init.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git add init.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git commit -m "initial commit"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> "very important data" | Out-File -Encoding utf8 important.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git add important.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git commit -m "add important.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git reset --hard HEAD~1
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/18/2026   8:27 PM              9 init.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git reflog -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git reflog
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git reset --hard 024f3fd
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/18/2026   8:27 PM             24 important.txt
+-a----        11/18/2026   8:27 PM              9 init.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex8-reflog> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex9-conflict
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:27 PM                ex9-conflict
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex9-conflict
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> "Hello World" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git commit -m "initial hello world"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git checkout -b edit-a
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> "Hello Alice" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git commit -m "change to Alice"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git checkout main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git checkout -b edit-b
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> "Hello Bob" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git commit -m "change to Bob"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git checkout main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git merge edit-a
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> Get-Content hello.txt
+Hello Alice
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git merge edit-b
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> Get-Content hello.txt
+<<<<<<< HEAD
+ן»¿Hello Alice
+=======
+ן»¿Hello Bob
+>>>>>>> edit-b
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> "Hello Alice and Bob" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> Get-Content hello.txt
+Hello Alice and Bob
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git commit -m "resolve conflict between Alice and Bob"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> git log --oneline --graph
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex9-conflict> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex10-detached-head
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:29 PM                ex10-detached-head
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex10-detached-head
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> "1" | Out-File -Encoding utf8 1.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git add 1.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git commit -m "add 1.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> "2" | Out-File -Encoding utf8 2.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git add 2.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git commit -m "add 2.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> "3" | Out-File -Encoding utf8 3.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git add 3.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git commit -m "add 3.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git checkout <HASH>
+At line:1 char:14
++ git checkout <HASH>
++              ~
+The '<' operator is reserved for future use.
+At line:1 char:14
++ git checkout <HASH>
++              ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> "mystery" | Out-File -Encoding utf8 mystery.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git add mystery.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git commit -m "add mystery.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git switch -c recovery-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git checkout main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git reset --hard 54680d2
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git branch -D recovery-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git checkout 243b106
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> "mystery" | Out-File -Encoding utf8 mystery.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git add mystery.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git commit -m "add mystery.txt"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git switch -c recovery-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> git log --all --oneline --graph
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex10-detached-head> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex11-remote-conflict
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:40 PM                ex11-remote-conflict
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex11-remote-conflict
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> "bug fix" | Out-File -Encoding utf8 app.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git add app.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git commit -m "Fixx bugs"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git remote add origin <GITHUB_REPO_URL>
+At line:1 char:23
++ git remote add origin <GITHUB_REPO_URL>
++                       ~
+The '<' operator is reserved for future use.
+At line:1 char:23
++ git remote add origin <GITHUB_REPO_URL>
++                       ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git remote -v
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push -u origin main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git commit --amend -m "Fix bugs"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push --force-with-lease
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git commit --amend -m "Fixx bugs"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git remote add origin https://github.com/ofekre/ex11-remote-conflict.git
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git remote -v
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push -u origin main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git commit --amend -m "Fix bugs"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git push --force-with-lease
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex11-remote-conflict> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex12-merge-abort
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:46 PM                ex12-merge-abort
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex12-merge-abort
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> "Hello World" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git commit -m "initial hello"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git checkout -b other-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> "Hello from other branch" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git commit -m "edit in other-branch"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git checkout main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> "Hello from main" | Out-File -Encoding utf8 hello.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git add hello.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git commit -m "edit in main"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git merge other-branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git merge -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git merge --abort
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> Get-Content hello.txt
+Hello from main
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex12-merge-abort> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex13-worktree
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:54 PM                ex13-worktree
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex13-worktree
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> "original code" | Out-File -Encoding utf8 base.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git add base.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git commit -m "initial base"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git checkout -b feature-heavy
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> "Messy unfinished work" | Out-File -Encoding utf8 base.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git worktree -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git worktree add ../hotfix-folder main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git worktree list
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> cd ../hotfix-folder
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\hotfix-folder> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\hotfix-folder> "fixed production bug" | Out-File -Encoding utf8 base.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\hotfix-folder> git add base.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\hotfix-folder> git commit -m "Emergency fix"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\hotfix-folder> cd ../ex13-worktree
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git branch
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> Get-Content base.txt
+Messy unfinished work
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git worktree remove ../hotfix-folder
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git worktree list
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> git log --all --oneline --graph
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex13-worktree> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> mkdir ex14-restore
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/18/2026   8:56 PM                ex14-restore
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> cd ex14-restore
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git init -b main
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> "initial a" | Out-File -Encoding utf8 file_a.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> "vital information in b" | Out-File -Encoding utf8 file_b.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git add file_a.txt file_b.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git commit -m "Initial state"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Remove-Item file_b.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git add file_b.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git commit -m "Remove unused file"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> "clean c" | Out-File -Encoding utf8 file_c.txt
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git add file_c.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git commit -m "Add new feature"
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Add-Content -Path file_a.txt -Value "Valuable Progress"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Add-Content -Path file_c.txt -Value "Accidental Corruption"
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git diff
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git restore -h
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git restore file_c.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git log --oneline
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git restore --source HEAD~2 file_b.txt
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> git status
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> ls
+
+
+    Directory: C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/18/2026   8:56 PM             33 file_a.txt
+-a----        11/18/2026   8:56 PM             27 file_b.txt
+-a----        11/18/2026   8:56 PM             12 file_c.txt
+
+
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Get-Content file_a.txt
+initial a
+Valuable Progress
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Get-Content file_b.txt
+vital information in b
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> Get-Content file_c.txt
+clean c
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט\ex14-restore> cd ..
+PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20261118205909
+**********************
