@@ -43,7 +43,7 @@ string manipulation, list/dict comprehensions, generators, and decorators.
   missing docstrings.
 - Do not let me move on if the code is not clean.
 
-אני עובד עכשיו על המטלה בקובץ advanced git (1).pdf שבתיקייה, תתייחס לכללים האלה לתרגילים של Git
+אני עובד עכשיו על המטלה בקובץ advanced git (1).pdf שבתיקייה תתייחס לכללים האלה לתרגילים של Git
 
 עוזר:
 קראתי את קובץ המטלה (advanced git (1).pdf) ואת הנחיות המרצה.
@@ -52,151 +52,151 @@ string manipulation, list/dict comprehensions, generators, and decorators.
 בוא נתחיל בתרגיל 1 (Forgot -m and suddenly vim) — תנסה קודם ותראה לי איפה אתה עומד.
 
 סטודנט:
-פתחתי תיקייה ex1-vim, הרצתי git init וישר git commit וזה לא פתח vim, כתב nothing to commit. אחר כך לחצתי i וזרק שגיאה
+פתחתי תיקייה ex1-vim הרצתי git init וישר git commit וזה לא פתח vim כתב nothing to commit אחר כך לחצתי i וזרק שגיאה
 
 עוזר:
 מה לדעתך Git צריך כדי ש-git commit יוכל לשמור משהו? איזה שלב פספסת לפני ה-commit?
 
 סטודנט:
-ליצור קובץ ולעשות git add?
+ליצור קובץ ולעשות git add
 
 עוזר:
 בדיוק. ובלי קובץ ב-staging, ה-commit יוצא מיד ולכן i רץ ב-PowerShell ולא ב-vim.
 תפעיל Start-Transcript, תיצור קובץ, תעשה git add ותנסה שוב git commit.
 
 סטודנט:
-הפעלתי Start-Transcript, נכנסתי ל-ex1-vim, יצרתי a.txt ועשיתי add, הרצתי git commit ועלה לי E325 ATTENTION Found a swap file
+הפעלתי Start-Transcript נכנסתי ל-ex1-vim יצרתי a.txt ועשיתי add הרצתי git commit ועלה לי E325 ATTENTION Found a swap file
 
 עוזר:
 למה לדעתך נוצר קובץ swap כזה? ואיזו אות מהאפשרויות למטה מוחקת אותו?
 
 סטודנט:
-כנראה מהניסיון הקודם שנתקע. יש למטה D ל-Delete it
+כנראה מהניסיון הקודם שנתקע יש למטה D ל-Delete it
 
 עוזר:
 נכון, תלחץ D.
 
 סטודנט:
-נכנסתי לvim, כתבתי first commit, לחצתי esc ובטעות לחצתי q: ונפתח חלון למטה You discovered the command-line window. איך יוצאים בלי לבטל את הcommit
+נכנסתי לvim כתבתי first commit לחצתי esc ובטעות לחצתי q: ונפתח חלון למטה You discovered the command-line window איך יוצאים בלי לבטל את הcommit
 
 עוזר:
 כתוב שם בהודעה למטה איך סוגרים את החלון הזה (:q). אחרי שתסגור אותו ותחזור לחלון של ההודעה, איך שומרים ויוצאים ב-vim? (וודא שהמקלדת על אנגלית).
 
 סטודנט:
-:wq. עבד, שמר על master ([master (root-commit) 8856071] first commit).
+:wq עבד שמר על master [master (root-commit) 8856071] first commit
 
 עוזר:
 לפני שעוברים לתרגיל 2 — מה היה החלק הכי מבלבל בתרגיל הזה, ומה לקחת ממנו?
 
 סטודנט:
-הקטע שנכנסתי ל-command-line window עם q: במקום :q, ושחייב staging לפני commit אחרת vim בכלל לא נפתח.
+הקטע שנכנסתי ל-command-line window עם q: במקום :q ושחייב staging לפני commit אחרת vim בכלל לא נפתח
 
 עוזר:
 יפה. אפשר לעבור לתרגיל 2 (revert&reset) — תתחיל לנסות בריפו חדש ותעדכן אם נתקעת.
 
 סטודנט:
-בתרגיל 2 כתוב main ואצלי קרא לזה master. איך קוראים לבראנץ הראשון?
+בתרגיל 2 כתוב main ואצלי קרא לזה master איך קוראים לבראנץ הראשון
 
 עוזר:
 אצלך ברירת המחדל היא master. מה צריך להוסיף ל-git init כדי שמההתחלה ה-branch הראשי ייקרא main?
 
 סטודנט:
-git init -b main?
+git init -b main
 
 עוזר:
 בדיוק. תמשיך עם זה ותראה לי מה ניסית.
 
 סטודנט:
-פתחתי ex2-revert-reset, עשיתי commit ל-a.txt והרצתי git branch new-branch, אבל אני עדיין על main
+פתחתי ex2-revert-reset עשיתי commit ל-a.txt והרצתי git branch new-branch אבל אני עדיין על main
 
 עוזר:
 מה ההבדל בין git branch ל-git checkout -b? והאם בתרגיל 2 אתה אמור להישאר על main או לעבור?
 
 סטודנט:
-git branch רק יוצר בלי לעבור. לפי שלב 3 צריך להוסיף את b.txt ל-main אז זה טוב שנשארתי. הוספתי b.txt, עכשיו מה ההבדל בין git revert ל-git reset
+git branch רק יוצר בלי לעבור לפי שלב 3 צריך להוסיף את b.txt ל-main אז זה טוב שנשארתי הוספתי b.txt עכשיו מה ההבדל בין git revert ל-git reset
 
 עוזר:
 תחשוב על היסטוריית ה-commits: מה לדעתך קורה ל-commit הקיים ב-revert לעומת ב-reset?
 
 סטודנט:
-ב-revert זה מוסיף commit חדש שמבטל? וב-reset מוחק אחורה?
+ב-revert זה מוסיף commit חדש שמבטל וב-reset מוחק אחורה
 
 עוזר:
 מדויק. ב-revert ההיסטוריה נשמרת ונוסף commit הפוך (בטוח לעבודה בצוות), וב-reset המצביע זז אחורה ומוחק מהלוג את מה שאחריו (ועם --hard גם מהקבצים בתיקייה). תמשיך את התרגיל ותבדוק אחרי זה עם git log --oneline ו-ls.
 
 סטודנט:
-הרצתי git revert HEAD --no-edit, הוספתי c.txt, ואז היו לי 4 commits אז הרצתי git reset --hard HEAD~3. נשאר רק add a.txt ו-a.txt.
+הרצתי git revert HEAD --no-edit הוספתי c.txt ואז היו לי 4 commits אז הרצתי git reset --hard HEAD~3 נשאר רק add a.txt ו-a.txt
 
 עוזר:
 למה דווקא HEAD~3? ומה למדת מההבדל בין שני החלקים בתרגיל?
 
 סטודנט:
-כי היו 4 קומיטים (a, b, revert, c) וכדי לחזור לראשון צריך 3 צעדים אחורה. revert משאיר תיעוד של הביטול ו-reset מוחק אחורה.
+כי היו 4 קומיטים a b revert c וכדי לחזור לראשון צריך 3 צעדים אחורה revert משאיר תיעוד של הביטול ו-reset מוחק אחורה
 
 עוזר:
 מדויק. תתחיל את תרגיל 3 (amend) ותחזור עם מה שניסית.
 
 סטודנט:
-בתרגיל 3 יצרתי ex3-amend, עשיתי commit ראשוני ואז שיניתי הודעה עם git commit --amend. לפני זה הלוג הראה 8553e13 ואחריו 5d16e31. למה זה שינה hash אם הקובץ לא השתנה
+בתרגיל 3 יצרתי ex3-amend עשיתי commit ראשוני ואז שיניתי הודעה עם git commit --amend לפני זה הלוג הראה 8553e13 ואחריו 5d16e31 למה זה שינה hash אם הקובץ לא השתנה
 
 עוזר:
 מה לדעתך נכנס לחישוב של ה-hash ב-Git חוץ מתוכן הקבצים?
 
 סטודנט:
-הודעת ה-commit? אולי גם הזמן?
+הודעת ה-commit אולי גם הזמן
 
 עוזר:
 נכון — התוכן, ההודעה, הזמן, המחבר וה-parent. לכן --amend לא באמת "עורך" אלא מחליף ל-commit חדש לגמרי. מה לדעתך היית עושה אחרת אם כבר היית דוחף את הקומיט הזה ל-GitHub?
 
 סטודנט:
-לא הייתי עושה amend על משהו שכבר נדחף כי זה משנה את ה-hash.
+לא הייתי עושה amend על משהו שכבר נדחף כי זה משנה את ה-hash
 
 עוזר:
 נכון מאוד. תמשיך לתרגיל 4 (Squash) ותראה לי איך מתקדם.
 
 סטודנט:
-פתחתי ex4-squash, עשיתי commit ראשון, ניסיתי להריץ vim a.txt וקיבלתי vim : The term 'vim' is not recognized
+פתחתי ex4-squash עשיתי commit ראשון ניסיתי להריץ vim a.txt וקיבלתי vim : The term 'vim' is not recognized
 
 עוזר:
 ב-Windows ה-vim של Git לא מוגדר ישירות ב-PATH של PowerShell. באיזו דרך אחרת תוכל להוסיף שורות ל-a.txt מתוך PowerShell, ולבדוק את השינוי לפני ה-commit?
 
 סטודנט:
-עם Add-Content, ואז git diff לראות מה נוסף.
+עם Add-Content ואז git diff לראות מה נוסף
 
 עוזר:
 בדיוק. תעשה 3 עריכות כאלה ו-3 commits, ואז תראה לי את ה-git log --oneline.
 
 סטודנט:
-עשיתי 3 עריכות, הנה הלוג:
+עשיתי 3 עריכות הנה הלוג
 8b32943 edit 3
 6f1b253 edit 2
 4b2582e edit 1
 2df3896 initial commit
-הסתכלתי גם ב-git rebase -h. מה הפקודה לאחד את כל הארבעה כולל הראשון?
+הסתכלתי גם ב-git rebase -h מה הפקודה לאחד את כל הארבעה כולל הראשון
 
 עוזר:
 בדרך כלל כותבים HEAD~3, אבל כשרוצים לכלול גם את ה-commit הראשון של הריפו משתמשים ב-git rebase -i --root. במסך שייפתח, איזה מהקומיטים נשאר pick ומה עושים עם השלושה שאחריו?
 
 סטודנט:
-הראשון נשאר pick והשאר squash. אוחד ל-d8b4dc0, בדקתי ב-git show --stat וב-Get-Content וכל 4 השורות שם.
+הראשון נשאר pick והשאר squash אוחד ל-d8b4dc0 בדקתי ב-git show --stat וב-Get-Content וכל 4 השורות שם
 
 עוזר:
 מה הרווחת פה מבחינת היסטוריית הפרויקט, ומה היה החלק שהכי דרש תשומת לב?
 
 סטודנט:
-במקום 4 קומיטים קטנים יש commit אחד נקי, והקטע שהיה צריך --root כדי לכלול את הראשון.
+במקום 4 קומיטים קטנים יש commit אחד נקי והקטע שהיה צריך --root כדי לכלול את הראשון
 
 עוזר:
 בדיוק. בוא נעבור לתרגיל 5 (gitignore).
 
 סטודנט:
-פתחתי ex5-gitignore, יצרתי a.py והרצתי, אבל ls -Force מראה רק .git ו-a.py. איך נוצרים קבצי המערכת של PyCharm?
+פתחתי ex5-gitignore יצרתי a.py והרצתי אבל ls -Force מראה רק .git ו-a.py איך נוצרים קבצי המערכת של PyCharm
 
 עוזר:
 כשפותחים את התיקייה ב-PyCharm נוצרת תיקיית .idea (וכשמייבאים קבצי פייתון נוצר __pycache__ עם .pyc). אם PyCharm לא פתוח, איך אפשר לבדוק בכל זאת ש-.gitignore שלך עובד?
 
 סטודנט:
-ליצור תיקיית .idea עם קובץ דמה בפנים ולראות ב-git status?
+ליצור תיקיית .idea עם קובץ דמה בפנים ולראות ב-git status
 
 עוזר:
 בדיוק. נסה את זה ובדוק גם git check-ignore -h.
@@ -204,117 +204,117 @@ git branch רק יוצר בלי לעבור. לפי שלב 3 צריך להוסי�
 --- 18/11/2026 ---
 
 סטודנט:
-פתחתי היום טרמינל מחדש והפעלתי Start-Transcript עם -Append. נכנסתי ל-ex5-gitignore ובדקתי git status ו-git log --oneline לראות איפה עצרתי. יצרתי .idea/workspace.xml ובאמת הוא הופיע תחת Untracked files.
+פתחתי היום טרמינל מחדש והפעלתי Start-Transcript עם -Append נכנסתי ל-ex5-gitignore ובדקתי git status ו-git log --oneline לראות איפה עצרתי יצרתי .idea/workspace.xml ובאמת הוא הופיע תחת Untracked files
 
 עוזר:
 מעולה שחיברת עם -Append. מה צריך להופיע בתוך .gitignore כדי להתעלם מהתיקייה הזו ומקבצי bytecode של Python?
 
 סטודנט:
-.idea/ וגם __pycache__/ ו-*.pyc.
+.idea/ וגם __pycache__/ ו-*.pyc
 
 עוזר:
 נכון. תיצור את הקובץ, ובדוק עם git check-ignore -v על הקובץ שבתוך .idea לפני שאתה עושה commit.
 
 סטודנט:
-בדקתי, check-ignore הראה שזה נתפס בכלל של .idea/, וב-git status זה נעלם (מופיע רק עם --ignored). עשיתי commit ל-.gitignore.
+בדקתי check-ignore הראה שזה נתפס בכלל של .idea/ וב-git status זה נעלם מופיע רק עם --ignored עשיתי commit ל-.gitignore
 
 עוזר:
 למה חשוב ש-.gitignore יהיה ב-commit לפני שמריצים git add -a בפרויקט?
 
 סטודנט:
-כדי ש-git add לא ידחוף בטעות קבצי הגדרות או cache לריפו.
+כדי ש-git add לא ידחוף בטעות קבצי הגדרות או cache לריפו
 
 עוזר:
 נכון. אפשר לעבור לתרגיל 6 (Wrong Branch Savior) — תנסה ותחזור עם מה שקרה.
 
 סטודנט:
-בתרגיל 6 ערכתי את base.txt על main. למה צריך git stash אם אפשר פשוט לעשות git checkout -b feature-branch ישר?
+בתרגיל 6 ערכתי את base.txt על main למה צריך git stash אם אפשר פשוט לעשות git checkout -b feature-branch ישר
 
 עוזר:
 מה יקרה אם תרצה לעבור ל-branch שכבר קיים ושונה בו אותו קובץ, או אם פשוט תרצה להחליף branch בלי לקחת איתך עבודה מלוכלכת?
 
 סטודנט:
-זה יחסום או יתנגש. stash שומר את השינוי בצד ומנקה את התיקייה. בדקתי git stash -h, הרצתי stash, בדקתי stash list, עברתי ל-feature-branch ועשיתי pop. השינוי עבר ו-stash list התרוקן.
+זה יחסום או יתנגש stash שומר את השינוי בצד ומנקה את התיקייה בדקתי git stash -h הרצתי stash בדקתי stash list עברתי ל-feature-branch ועשיתי pop השינוי עבר ו-stash list התרוקן
 
 עוזר:
 איזו פקודה מוודאת שהשינוי באמת חזר לתיקייה בלי שנשאר ב-stash?
 
 סטודנט:
-git status, git diff ו-git stash list.
+git status git diff ו-git stash list
 
 עוזר:
 מצוין. תעבור לתרגיל 7 (Cherry-Picking) ותראה לי מה ניסית.
 
 סטודנט:
-יצרתי branch בשם dev ועליו 3 קומיטים. חזרתי ל-main ובדקתי ls (יש רק init.txt). הנה git log dev --oneline:
+יצרתי branch בשם dev ועליו 3 קומיטים חזרתי ל-main ובדקתי ls יש רק init.txt הנה git log dev --oneline
 080c106 add fix3
 bfcb558 add fix2
 1d77a06 add fix1
 e783ee0 initial commit
-אם מריץ git cherry-pick bfcb558 זה לוקח רק את fix2 או גם את fix1?
+אם מריץ git cherry-pick bfcb558 זה לוקח רק את fix2 או גם את fix1
 
 עוזר:
 מה המשמעות של cherry-pick לעומת merge? מה הוא מעתיק בפועל?
 
 סטודנט:
-רק את השינויים של הקומיט שבחרתי, לא את כל ההיסטוריה לפניו. בדקתי cherry-pick -h, הרצתי git cherry-pick bfcb558 וב-ls על main יש רק init.txt ו-fix2.txt.
+רק את השינויים של הקומיט שבחרתי לא את כל ההיסטוריה לפניו בדקתי cherry-pick -h הרצתי git cherry-pick bfcb558 וב-ls על main יש רק init.txt ו-fix2.txt
 
 עוזר:
 מתי בעולם האמיתי תעדיף cherry-pick על merge?
 
 סטודנט:
-כשצריך דחוף תיקון ספציפי ל-main בלי להכניס פיצ'רים שעוד לא מוכנים מ-dev.
+כשצריך דחוף תיקון ספציפי ל-main בלי להכניס פיצ'רים שעוד לא מוכנים מ-dev
 
 עוזר:
 מדויק. בוא נמשיך לתרגיל 8 (Undo the Undo).
 
 סטודנט:
-עשיתי git reset --hard HEAD~1 ו-important.txt נמחק וגם נעלם מ-git log. למה git reflog בכל זאת מוצא אותו?
+עשיתי git reset --hard HEAD~1 ו-important.txt נמחק וגם נעלם מ-git log למה git reflog בכל זאת מוצא אותו
 
 עוזר:
 מה ההבדל בין מה ש-git log מתעד לבין מה ש-git reflog מתעד?
 
 סטודנט:
-git log מראה היסטוריה של branch ו-reflog מתעד כל תזוזה של HEAD מקומית. יצא לי בreflog:
+git log מראה היסטוריה של branch ו-reflog מתעד כל תזוזה של HEAD מקומית יצא לי בreflog
 c5d49a5 HEAD@{0}: reset: moving to HEAD~1
 024f3fd HEAD@{1}: commit: add important.txt
-להריץ git reset --hard 024f3fd?
+להריץ git reset --hard 024f3fd
 
 עוזר:
 כן. תבדוק אחר כך שהקובץ והקומיט חזרו.
 
 סטודנט:
-חזר. reset --hard לא באמת מוחק ישר מהדיסק כל עוד זה ב-reflog.
+חזר reset --hard לא באמת מוחק ישר מהדיסק כל עוד זה ב-reflog
 
 עוזר:
 בדיוק. תנסה עכשיו את תרגיל 9 (Conflict Resolution).
 
 סטודנט:
-מיזגתי edit-a לתוך main ואז ב-edit-b קיבלתי קונפליקט. ב-Get-Content hello.txt יש:
+מיזגתי edit-a לתוך main ואז ב-edit-b קיבלתי קונפליקט ב-Get-Content hello.txt יש
 <<<<<<< HEAD
 Hello Alice
 =======
 Hello Bob
 >>>>>>> edit-b
-למה Git עצר ומה אני צריך להשאיר בקובץ?
+למה Git עצר ומה אני צריך להשאיר בקובץ
 
 עוזר:
 שני ה-branches שינו את אותה שורה. Git לא יודע מה לבחור ולכן מסמן את שני הצדדים. מה לדעתך צריך לעשות עם הסימנים <<<<<<<, =======, >>>>>>> ואיך מודיעים ל-Git שפתרת?
 
 סטודנט:
-מוחקים את הסימנים, משאירים את הטקסט הסופי, ואז git add ו-git commit. ערכתי ל-Hello Alice and Bob, בדקתי status ועשיתי commit. ב-git log --oneline --graph רואים את המיזוג.
+מוחקים את הסימנים משאירים את הטקסט הסופי ואז git add ו-git commit ערכתי ל-Hello Alice and Bob בדקתי status ועשיתי commit ב-git log --oneline --graph רואים את המיזוג
 
 עוזר:
 מה היה קורה אם היית משאיר את שורות ה-======= ועושה add?
 
 סטודנט:
-הטקסט היה נשמר שבור עם סימני הקונפליקט בפנים.
+הטקסט היה נשמר שבור עם סימני הקונפליקט בפנים
 
 עוזר:
 נכון. תמשיך לתרגיל 10 (Detached HEAD).
 
 סטודנט:
-הרצתי בטעות git checkout <HASH> בלי להחליף את הטקסט, זרק שגיאה על '<' והמשכתי בטעות לעשות commit ל-mystery.txt ופתחתי recovery-branch על main. הלוג שלי עכשיו:
+הרצתי בטעות git checkout <HASH> בלי להחליף את הטקסט זרק שגיאה על '<' והמשכתי בטעות לעשות commit ל-mystery.txt ופתחתי recovery-branch על main הלוג שלי עכשיו
 a6bf83b (HEAD -> recovery-branch, main) add mystery.txt
 54680d2 add 3.txt
 2dee2ed add 2.txt
@@ -325,91 +325,91 @@ a6bf83b (HEAD -> recovery-branch, main) add mystery.txt
 איזה hash פה הוא הקומיט האחרון שהיה צריך להיות על main, ואיזה hash הוא הקומיט הראשון שממנו צריך להתחיל detached HEAD?
 
 סטודנט:
-54680d2 צריך להיות על main, ו-243b106 זה הראשון. אז לחזור ל-main, לעשות reset --hard 54680d2, למחוק recovery-branch ואז checkout 243b106?
+54680d2 צריך להיות על main ו-243b106 זה הראשון אז לחזור ל-main לעשות reset --hard 54680d2 למחוק recovery-branch ואז checkout 243b106
 
 עוזר:
 בדיוק. תנסה את זה ותראה מה מופיע כשנכנסים ל-243b106.
 
 סטודנט:
-סודר. עלתה אזהרה של detached HEAD, הוספתי mystery.txt ופתחתי recovery-branch עם switch -c. בגרף זה מתפצל מ-1.txt.
+סודר עלתה אזהרה של detached HEAD הוספתי mystery.txt ופתחתי recovery-branch עם switch -c בגרף זה מתפצל מ-1.txt
 
 עוזר:
 מה קורה במצב detached HEAD אם עוברים branch בלי לעשות switch -c?
 
 סטודנט:
-הקומיט נשאר יתום בלי branch שמצביע עליו ועלול להיעלם.
+הקומיט נשאר יתום בלי branch שמצביע עליו ועלול להיעלם
 
 עוזר:
 בדיוק. עכשיו תנסה את תרגיל 11 (Conflicts between local and remote).
 
 סטודנט:
-שכחתי להחליף <GITHUB_REPO_URL> וקיבלתי fatal: No configured push destination, וגם כבר הספקתי לעשות amend ל-"Fix bugs". למה בכלל צריך לפתוח ריפו חדש בגיטהאב בשביל תרגיל אחד?
+שכחתי להחליף <GITHUB_REPO_URL> וקיבלתי fatal: No configured push destination וגם כבר הספקתי לעשות amend ל-"Fix bugs" למה בכלל צריך לפתוח ריפו חדש בגיטהאב בשביל תרגיל אחד
 
 עוזר:
 מה יקרה אם תעשה force push על ריפו אמיתי שיש עליו עבודה קודמת?
 
 סטודנט:
-ישכתב את ההיסטוריה בשרת. אז פותחים ריפו dummy נפרד כדי לא להרוס. פתחתי https://github.com/ofekre/ex11-remote-conflict.git, החזרתי קודם ל-"Fixx bugs" עם amend, דחפתי, תיקנתי חזרה ל-"Fix bugs" וכשניסיתי push רגיל דחה אותי non-fast-forward. למה --force-with-lease עדיף מ---force?
+ישכתב את ההיסטוריה בשרת אז פותחים ריפו dummy נפרד כדי לא להרוס פתחתי https://github.com/ofekre/ex11-remote-conflict.git החזרתי קודם ל-"Fixx bugs" עם amend דחפתי תיקנתי חזרה ל-"Fix bugs" וכשניסיתי push רגיל דחה אותי non-fast-forward למה --force-with-lease עדיף מ---force
 
 עוזר:
 מה הסיכון של --force כשעוד מישהו עובד על אותו branch בשרת?
 
 סטודנט:
-ש--force דורס גם קומיטים שמישהו אחר דחף בינתיים, ו--force-with-lease בודק קודם שאף אחד לא שינה את השרת. הרצתי --force-with-lease ועדכן.
+ש--force דורס גם קומיטים שמישהו אחר דחף בינתיים ו--force-with-lease בודק קודם שאף אחד לא שינה את השרת הרצתי --force-with-lease ועדכן
 
 עוזר:
 מעולה. תעבור לתרגיל 12 (Messy Merge Abort).
 
 סטודנט:
-יש לי קונפליקט בין main ל-other-branch. מה עדיף להריץ כדי לבטל, git merge --abort או git reset --hard?
+יש לי קונפליקט בין main ל-other-branch מה עדיף להריץ כדי לבטל git merge --abort או git reset --hard
 
 עוזר:
 למה עדיף להשתמש בפקודה שמיועדת ספציפית ל-merge במצב של קונפליקט?
 
 סטודנט:
-כי git merge --abort מחזיר נקי רק את מצב ה-merge שלפני ההתחלה בלי סיכון למחוק דברים לא קשורים. בדקתי merge -h, הרצתי --abort, חזר ל-Hello from main.
+כי git merge --abort מחזיר נקי רק את מצב ה-merge שלפני ההתחלה בלי סיכון למחוק דברים לא קשורים בדקתי merge -h הרצתי --abort חזר ל-Hello from main
 
 עוזר:
 בדיוק. נמשיך לתרגיל 13 (Worktree Multi-Tasker) — תתחיל לנסות ותגיד אם משהו נתקע.
 
 סטודנט:
-פתחתי worktree ב-../hotfix-folder ועשיתי שם commit על main. בהוראות כתוב לחזור עם cd -, זה עובד ב-PowerShell? ואם אני עושה אחר כך git worktree remove זה לא ימחק את ה-commit שעשיתי על main?
+פתחתי worktree ב-../hotfix-folder ועשיתי שם commit על main בהוראות כתוב לחזור עם cd - זה עובד ב-PowerShell ואם אני עושה אחר כך git worktree remove זה לא ימחק את ה-commit שעשיתי על main
 
 עוזר:
 ב-PowerShell 5.1 cd - לא נתמך, אז חוזרים עם הנתיב (cd ../ex13-worktree). ולגבי השאלה השנייה — איפה שמור הקומיט עצמו, בתיקיית ה-worktree או ב-.git המשותף?
 
 סטודנט:
-ב-.git המשותף, אז remove מוחק רק את התיקייה הזמנית. חזרתי עם cd ../ex13-worktree, base.txt עדיין עם השינוי הלא גמור, הסרתי את hotfix-folder וב-log רואים את ה-Emergency fix על main.
+ב-.git המשותף אז remove מוחק רק את התיקייה הזמנית חזרתי עם cd ../ex13-worktree base.txt עדיין עם השינוי הלא גמור הסרתי את hotfix-folder וב-log רואים את ה-Emergency fix על main
 
 עוזר:
 מה היתרון שהרגשת פה לעומת git stash?
 
 סטודנט:
-שלא הייתי צריך לגעת בסביבת העבודה המבולגנת שלי בכלל, פשוט תיקנתי במקביל בתיקייה אחרת.
+שלא הייתי צריך לגעת בסביבת העבודה המבולגנת שלי בכלל פשוט תיקנתי במקביל בתיקייה אחרת
 
 עוזר:
 יפה. נשאר תרגיל 14 האחרון (The Restore Master) — תנסה ותעדכן.
 
 סטודנט:
-עשיתי את 3 הקומיטים וערכתי את file_a ו-file_c. תיקנתי את file_c עם git restore file_c.txt. עכשיו כדי לשחזר את file_b.txt שנמחק פעם — איך יודעים מה לשים ב--source וזה לא יזיז לי את HEAD אחורה?
+עשיתי את 3 הקומיטים וערכתי את file_a ו-file_c תיקנתי את file_c עם git restore file_c.txt עכשיו כדי לשחזר את file_b.txt שנמחק פעם איך יודעים מה לשים ב--source וזה לא יזיז לי את HEAD אחורה
 
 עוזר:
 מה ההבדל בין git restore --source לבין git checkout <hash> על commit? ותסתכל ב-git log --oneline ותגיד כמה צעדים אחורה file_b עוד היה קיים.
 
 סטודנט:
-checkout מזיז את HEAD (ל-detached) ו-restore --source רק מעתיק את הקובץ לתיקייה. בלוג: HEAD זה Add new feature, HEAD~1 זה המחיקה, אז HEAD~2 זה Initial state. הרצתי עם HEAD~2, שלושת הקבצים בתיקייה: file_a עם השינוי, file_c נקי, file_b משוחזר. עצרתי הקלטה עם Stop-Transcript.
+checkout מזיז את HEAD ל-detached ו-restore --source רק מעתיק את הקובץ לתיקייה בלוג HEAD זה Add new feature HEAD~1 זה המחיקה אז HEAD~2 זה Initial state הרצתי עם HEAD~2 שלושת הקבצים בתיקייה file_a עם השינוי file_c נקי file_b משוחזר עצרתי הקלטה עם Stop-Transcript
 
 עוזר:
 סיימת את כל 14 התרגילים. בסיכום של המטלה — איזה חלק היה הכי קשה ומה הדבר הכי חשוב שנכנס לראש?
 
 סטודנט:
-הקטע בהתחלה עם vim והתיקון של detached HEAD כששכחתי להחליף את ה-hash. הכי חשוב זה שהיסטוריה שנראה שנמחקה (reset) עדיין יושבת ב-reflog ואפשר להוציא קובץ ספציפי מהעבר עם restore --source בלי לשבור כלום.
+הקטע בהתחלה עם vim והתיקון של detached HEAD כששכחתי להחליף את ה-hash הכי חשוב זה שהיסטוריה שנראה שנמחקה reset עדיין יושבת ב-reflog ואפשר להוציא קובץ ספציפי מהעבר עם restore --source בלי לשבור כלום
 
 עוזר:
 מעולה, עכשיו נשאר שלב ההגשה מתוך ההנחיות.
 
 סטודנט:
-נכנסתי ללינק של github classroom מתוך הPDF וזה מפנה להודעה שGitHub Classroom נסגר באוגוסט 2026. אי אפשר לפתוח משם ריפו להגשה
+נכנסתי ללינק של github classroom מתוך הPDF וזה מפנה להודעה שGitHub Classroom נסגר באוגוסט 2026 אי אפשר לפתוח משם ריפו להגשה
 
 עוזר:
 נכון, השירות נסגר רשמית באוגוסט 2026. כדאי לשלוח למרצה הודעה קצרה עם צילום מסך ולשאול לאיזה ריפו רגיל להגיש את התיקיות ואת history.txt.

@@ -867,3 +867,107 @@ PS C:\Users\ofek6\Desktop\שיעור 3 תיכנות אינטרנט> Stop-Transcr
 Windows PowerShell transcript end
 End time: 20261118205909
 **********************
+
+Follow-up for exercises 4 and 5, run by Codex on 2026-11-25.
+
+--- Exercise 4: Vim edits and interactive rebase (10:52:29-10:52:31) ---
+Exercise 4 repeat: three edits with Vim and interactive rebase.
+git switch -c vim-practice 2df3896
+vim -Nu NONE -i NONE -n -es -c "$" -c "normal! oline 2" -c "wq" a.txt
+git add a.txt
+git commit -m edit 1 in Vim
+vim -Nu NONE -i NONE -n -es -c "$" -c "normal! oline 3" -c "wq" a.txt
+git add a.txt
+git commit -m edit 2 in Vim
+vim -Nu NONE -i NONE -n -es -c "$" -c "normal! oline 4" -c "wq" a.txt
+git add a.txt
+git commit -m edit 3 in Vim
+git log --oneline
+The sequence editor marks the last three commits for squash.
+git rebase -i --root
+git switch main
+git reset --hard vim-practice
+git branch -d vim-practice
+git hash-object -t tree -w --stdin (empty input)
+4b825dc642cb6eb9a060e54bf8d69288fbee4904
+git fsck --full --no-dangling
+git log --oneline
+git rev-list --count HEAD
+Commits on main: 1
+Get-Content a.txt
+line 1
+line 2
+line 3
+line 4
+git status --short --branch
+
+--- Exercise 4: Git history and integrity checks (10:53:19-10:53:20) ---
+git show --format=oneline --stat 2df3896
+2df3896a153152b285c2b04ca97f238bb03f88a6 initial commit
+ a.txt | 1 +
+ 1 file changed, 1 insertion(+)
+git show --format=oneline --stat b5b926d
+b5b926dfd195625bb998ebc6bd5d83732a4d1444 edit 1 in Vim
+ a.txt | 1 +
+ 1 file changed, 1 insertion(+)
+git show --format=oneline --stat bb274f4
+bb274f4f0cc3f43a5fad887f9a0bffc1f34feb05 edit 2 in Vim
+ a.txt | 1 +
+ 1 file changed, 1 insertion(+)
+git show --format=oneline --stat 103a1d7
+103a1d70bb28212a369444c8f444c88bacfdb29c edit 3 in Vim
+ a.txt | 1 +
+ 1 file changed, 1 insertion(+)
+git show --format=oneline --stat HEAD
+637cddc852d40a6161f810baa4a2d7ade7313b14 initial commit
+ a.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+git reflog --format=%h%x20%gs
+637cddc reset: moving to vim-practice
+d8b4dc0 checkout: moving from vim-practice to main
+637cddc rebase (finish): returning to refs/heads/vim-practice
+637cddc rebase (squash): initial commit
+127b26e rebase (squash): # This is a combination of 3 commits.
+753dca7 rebase (squash): # This is a combination of 2 commits.
+2df3896 rebase: fast-forward
+6cfbbb5 rebase (start): checkout 6cfbbb5c5e45928bd75e807a2de4990a71ffd6f4
+103a1d7 commit: edit 3 in Vim
+bb274f4 commit: edit 2 in Vim
+b5b926d commit: edit 1 in Vim
+2df3896 checkout: moving from main to vim-practice
+d8b4dc0 rebase (finish): returning to refs/heads/main
+git fsck --full --no-dangling
+Exit code: 0
+
+--- Exercise 5: Running a.py and opening PyCharm (10:52:29-10:52:29) ---
+Exercise 5 repeat: open the exercise in PyCharm and inspect the generated metadata.
+Move the .idea directory created by the previous manual test aside in this exercise copy.
+py -B a.py
+Start-Process "C:/Program Files/JetBrains/PyCharm 2025.3.3/bin/pycharm64.exe" with the exercise folder
+PyCharm process ID: 31868
+
+--- Exercise 5: Testing .gitignore with PyCharm-generated files (10:56:49-10:56:50) ---
+Opened ex5-gitignore in PyCharm 2025.3.3 in Preview in Safe Mode.
+Created a local Python project in PyCharm to obtain generated .idea files for the ignore test.
+PyCharm-generated files:
+.gitignore
+misc.xml
+modules.xml
+pycharm-metadata.iml
+git switch --detach HEAD^ (exercise copy, before the .gitignore commit)
+HEAD is now at e3efb27 add a.py
+git status --short
+?? .idea/
+git switch main (restore the .gitignore commit)
+Previous HEAD position was e3efb27 add a.py
+Switched to branch 'main'
+git check-ignore -v .idea/modules.xml
+.gitignore:1:.idea/	.idea/modules.xml
+git status --short
+Empty output. The working tree is clean.
+git status --short --ignored
+!! .idea/
+py -B a.py
+Hello from a.py
+
+The revised ZIP was extracted and git fsck passed for all 14 exercise repositories.
